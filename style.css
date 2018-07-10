@@ -28,6 +28,14 @@
   background-color: pink;
 }
 
+.changed_color2 {
+  background-color: plum;
+}
+
+.changed_color3 {
+  background-color: purple;
+}
+
 button {
   width: 80px;
   height: 40px;

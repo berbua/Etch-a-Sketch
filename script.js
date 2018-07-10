@@ -16,11 +16,24 @@ createSquares = squaresPerSide => {
 
 createSquares(squaresPerSide);
 
+//add hover
 let squaresArray = document.querySelectorAll(".new_div");
 
-squaresArray.forEach(square => {
+//first layout
+/*squaresArray.forEach(square => {
   square.addEventListener("mouseover", function(square) {
     this.classList.add("changed_color");
+  });
+});*/
+
+//second layout
+squaresArray.forEach(square => {
+  square.addEventListener("mouseover", function(square) {
+    if (this.classList.contains("changed_color") == true) {
+      this.classList.add("changed_color2");
+    } else {
+      this.classList.add("changed_color");
+    }
   });
 });
 
@@ -34,11 +47,11 @@ clearSketchPad = () => {
 let buttonClear = document.getElementById("reset");
 buttonClear.addEventListener("click", function() {
   clearSketchPad();
-  let userSquares = prompt("How many squares per side?");
+  /*let userSquares = prompt("How many squares per side?");
   createSquares(userSquares);
   squaresArray.forEach(square => {
     square.addEventListener("mouseover", function(square) {
       this.classList.add("changed_color");
     });
-  });
+  });*/
 });
