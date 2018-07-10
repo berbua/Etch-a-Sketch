@@ -5,17 +5,19 @@
 
 #container {
   width: 500px;
-  height: auto;
-  margin: 50px auto;
+  height: 500px;
+  margin: 10px auto;
   height: 500px;
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 
 .new_div {
   height: auto;
   background-color: lightgray;
-  border: 1px solid black;
+  border: 0.5px solid gray;
   flex-basis: 6.25%;
   padding: 0;
   margin: 0;
@@ -24,4 +26,10 @@
 
 .changed_color {
   background-color: pink;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  margin: 40px auto 30px 30%;
 }

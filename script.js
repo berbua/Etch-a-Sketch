@@ -1,5 +1,5 @@
 let container = document.getElementById("container");
-let squaresAmount = 16 * 16;
+let squaresPerSide = 16;
 
 let createSquare = () => {
   let square = document.createElement("div");
@@ -8,20 +8,37 @@ let createSquare = () => {
   return square;
 };
 
-console.log(createSquare());
-
-createSquares = () => {
-  for (i = 0; i < squaresAmount - 1; i++) {
+createSquares = squaresPerSide => {
+  for (i = 0; i < squaresPerSide * squaresPerSide; i++) {
     container.appendChild(createSquare());
   }
 };
 
-createSquares();
+createSquares(squaresPerSide);
 
 let squaresArray = document.querySelectorAll(".new_div");
 
 squaresArray.forEach(square => {
   square.addEventListener("mouseover", function(square) {
     this.classList.add("changed_color");
+  });
+});
+
+clearSketchPad = () => {
+  let paintedSquares = document.querySelectorAll(".changed_color");
+  paintedSquares.forEach(square => {
+    square.classList.remove("changed_color");
+  });
+};
+
+let buttonClear = document.getElementById("reset");
+buttonClear.addEventListener("click", function() {
+  clearSketchPad();
+  let userSquares = prompt("How many squares per side?");
+  createSquares(userSquares);
+  squaresArray.forEach(square => {
+    square.addEventListener("mouseover", function(square) {
+      this.classList.add("changed_color");
+    });
   });
 });
