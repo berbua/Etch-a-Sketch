@@ -4,9 +4,9 @@ let color = 0;
 //create squares grid refactored
 
 let createGrid = sideSize => {
-  document.styleSheets[0].cssRules[2].style["grid-template-columns"] =
+  document.styleSheets[0].cssRules[3].style["grid-template-columns"] =
     "repeat(" + sideSize + ", 1fr)";
-  document.styleSheets[0].cssRules[2].style["grid-template-rows"] =
+  document.styleSheets[0].cssRules[3].style["grid-template-rows"] =
     "repeat(" + sideSize + ", 1fr)";
   for (i = 0; i < squaresPerSide * squaresPerSide; i++) {
     let square = document.createElement("div");
