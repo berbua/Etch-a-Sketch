@@ -45,6 +45,8 @@ body {
   border: 1px solid gray;
   border-radius: 5px;
   display: grid;
+  background-color: #ececec;
+  z-index: 15;
 }
 
 .new_div {
