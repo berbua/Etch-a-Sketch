@@ -3,6 +3,16 @@
   padding: 0;
 }
 
+body {
+  color: #777;
+  background-color: #acb0b1;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #container {
   width: 500px;
   height: 500px;
