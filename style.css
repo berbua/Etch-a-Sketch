@@ -42,7 +42,6 @@ body {
   height: 80%;
   margin: 10px auto;
   height: 500px;
-  border: 1px solid gray;
   border-radius: 5px;
   display: grid;
   background-color: #ececec;
@@ -59,6 +58,7 @@ body {
 }
 #controls {
   width: 100%;
+  height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
