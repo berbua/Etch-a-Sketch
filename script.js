@@ -1,5 +1,6 @@
 let container = document.getElementById("container");
 let squaresPerSide = 16;
+let color = 0;
 //create squares grid refactored
 
 let createGrid = sideSize => {
@@ -71,7 +72,7 @@ function colourful() {
     let color = "#";
     squares[i].style.opacity = 0;
     //create a random hexcode for each pixel
-    for (var j = 0; j < 6; j++) {
+    for (let j = 0; j < 6; j++) {
       color += hexSymbol.charAt(Math.floor(Math.random() * hexSymbol.length));
     }
     //set pixel to new color
