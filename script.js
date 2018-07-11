@@ -1,20 +1,39 @@
 let container = document.getElementById("container");
 let squaresPerSide = 16;
+//create squares grid refactored
 
+let createGrid = sideSize => {
+  document.styleSheets[0].cssRules[1].style["grid-template-columns"] =
+    "repeat(" + sideSize + ", 1fr)";
+  document.styleSheets[0].cssRules[1].style["grid-template-rows"] =
+    "repeat(" + sideSize + ", 1fr)";
+  for (i = 0; i < squaresPerSide * squaresPerSide; i++) {
+    let square = document.createElement("div");
+    square.className = "new_div";
+    container.appendChild(square);
+  }
+};
+
+console.log(document.styleSheets[0].cssRules[0]);
+
+createGrid(16);
+/*
+//create one square
 let createSquare = () => {
   let square = document.createElement("div");
-  square.classList.add("new_div");
+  square.className = "new_div";
   container.appendChild(square);
   return square;
 };
 
+//create squares grid
 createSquares = squaresPerSide => {
   for (i = 0; i < squaresPerSide * squaresPerSide; i++) {
     container.appendChild(createSquare());
   }
 };
 
-createSquares(squaresPerSide);
+createSquares(squaresPerSide); */
 
 //add hover
 let squaresArray = document.querySelectorAll(".new_div");
