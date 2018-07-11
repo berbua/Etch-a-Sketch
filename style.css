@@ -6,7 +6,7 @@
 body {
   color: #777;
   background-color: #acb0b1;
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +72,19 @@ button {
   border-radius: 50%;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
+}
+
+/*media queries*/
+
+@media all and (orientation: landscape) {
+  #scatchboard {
+    width: 70vh;
+    height: 70vh;
+  }
+  /*button {
+      width: 8vh;
+      height: 8vh;
+  }*/
 }
 
 /*before refactoring
