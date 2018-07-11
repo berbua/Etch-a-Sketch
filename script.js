@@ -47,7 +47,7 @@ buttonClear.addEventListener("click", e => {
     //create new grid from size
     createGrid(newSize);
     onHover();
-    color ? colorful() : "";
+    color ? colourful() : "";
   }
 });
 
