@@ -14,7 +14,7 @@ let createGrid = sideSize => {
   }
 };
 
-console.log(document.styleSheets[0].cssRules[0]);
+console.log(document.styleSheets[0].cssRules[1]);
 
 createGrid(16);
 /*
