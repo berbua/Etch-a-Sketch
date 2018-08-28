@@ -8,7 +8,7 @@ let createGrid = sideSize => {
     "repeat(" + sideSize + ", 1fr)";
   document.styleSheets[0].cssRules[3].style["grid-template-rows"] =
     "repeat(" + sideSize + ", 1fr)";
-  for (i = 0; i < squaresPerSide * squaresPerSide; i++) {
+  for (i = 0; i < sideSize * sideSize; i++) {
     let square = document.createElement("div");
     square.className = "new_div";
     container.appendChild(square);
