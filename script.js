@@ -1,9 +1,9 @@
-let container = document.getElementById("container");
+const container = document.getElementById("container");
 let squaresPerSide = 16;
 let color = 0;
 //create squares grid refactored
 
-let createGrid = sideSize => {
+const createGrid = sideSize => {
   document.styleSheets[0].cssRules[3].style["grid-template-columns"] =
     "repeat(" + sideSize + ", 1fr)";
   document.styleSheets[0].cssRules[3].style["grid-template-rows"] =
@@ -36,7 +36,7 @@ onHover = () => {
 onHover();
 
 //clear board on click
-let buttonClear = document.getElementById("reset");
+const buttonClear = document.getElementById("reset");
 buttonClear.addEventListener("click", e => {
   let newSize = Number(window.prompt("How many squares per side?", 16));
   //only if new size is provided remove old grid
@@ -89,62 +89,3 @@ function bw() {
     squares[i].style.backgroundColor = "black";
   }
 }
-
-//before refactoring
-
-/*
-//create one square
-let createSquare = () => {
-  let square = document.createElement("div");
-  square.className = "new_div";
-  container.appendChild(square);
-  return square;
-};
-
-//create squares grid
-createSquares = squaresPerSide => {
-  for (i = 0; i < squaresPerSide * squaresPerSide; i++) {
-    container.appendChild(createSquare());
-  }
-};
-
-createSquares(squaresPerSide); 
-
-let squaresArray = document.querySelectorAll(".new_div");
-
-//first layout
-/*squaresArray.forEach(square => {
-  square.addEventListener("mouseover", function(square) {
-    this.classList.add("changed_color");
-  });
-});
-
-//second layout
-squaresArray.forEach(square => {
-  square.addEventListener("mouseover", function(square) {
-    if (this.classList.contains("changed_color") == true) {
-      this.classList.add("changed_color2");
-    } else {
-      this.classList.add("changed_color");
-    }
-  });
-});
-
-clearSketchPad = () => {
-  let paintedSquares = document.querySelectorAll(".changed_color");
-  paintedSquares.forEach(square => {
-    square.classList.remove("changed_color");
-  });
-};
-
-let buttonClear = document.getElementById("reset");
-buttonClear.addEventListener("click", function() {
-  clearSketchPad();
-  /*let userSquares = prompt("How many squares per side?");
-  createSquares(userSquares);
-  squaresArray.forEach(square => {
-    square.addEventListener("mouseover", function(square) {
-      this.classList.add("changed_color");
-    });
-  });
-}); */
